@@ -11,36 +11,36 @@ import com.example.recview.databinding.ItemCatagoryBinding;
 
 import java.util.ArrayList;
 
-public class CatagoryAdapter extends RecyclerView.Adapter<DoramaViewHolder> {
+public class CatagoryAdapter extends RecyclerView.Adapter<CatagoryViewHolder> {
 
-    private ArrayList<Catagory> doramaList;
+    private ArrayList<Catagory> catagoryList;
 
-    public CatagoryAdapter(ArrayList<Catagory> doramaList) {
-        this.doramaList = doramaList;
+    public CatagoryAdapter(ArrayList<Catagory> catagoryList) {
+        this.catagoryList = catagoryList;
     }
 
     @NonNull
     @Override
-    public DoramaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new DoramaViewHolder(ItemCatagoryBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
+    public CatagoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new CatagoryViewHolder(ItemCatagoryBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DoramaViewHolder holder, int position) {
-        holder.onBind(doramaList.get(position));
+    public void onBindViewHolder(@NonNull CatagoryViewHolder holder, int position) {
+        holder.onBind(catagoryList.get(position));
 
     }
 
     @Override
     public int getItemCount() {
-        return doramaList.size();
+        return catagoryList.size();
     }
 }
 
-class DoramaViewHolder extends RecyclerView.ViewHolder {
+class CatagoryViewHolder extends RecyclerView.ViewHolder {
     private ItemCatagoryBinding binding;
 
-    public DoramaViewHolder(@NonNull ItemCatagoryBinding binding) {
+    public CatagoryViewHolder(@NonNull ItemCatagoryBinding binding) {
         super(binding.getRoot());
         this.binding = binding;
     }
